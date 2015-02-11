@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/holder"
+        android:layout_width="120dip"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:background="#fcfcfc">
+
+        <ImageView
+            android:layout_width="60dip"
+            android:layout_height="match_parent"
+            android:id="@+id/projectInfo"
+            android:src="@drawable/sel_project_info"
+            android:padding="10dp"
+            android:background="@color/green"/>
+
+        <ImageView
+            android:layout_width="60dip"
+            android:layout_height="match_parent"
+            android:id="@+id/projectDel"
+            android:src="@drawable/sel_project_del"
+            android:padding="10dp"
+            android:background="@color/red"
+            android:layout_toRightOf="@+id/projectInfo"/>
+
+    </RelativeLayout>
+
+</merge>

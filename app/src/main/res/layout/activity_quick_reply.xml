@@ -1,0 +1,179 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="150dp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="15.0dp"
+    android:layout_marginRight="15.0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pop_layout"
+        android:background="#fcfcfc"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#E4E4E4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="回复"
+                android:textColor="#ad191919"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/list_item_line_color"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp">
+
+
+            <RelativeLayout
+                android:id="@+id/ry_content"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp">
+
+                <ImageView
+                    android:id="@+id/iv_send_type_chg"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/send_text" />
+
+                <EditText
+                    android:id="@+id/edit_text_replay"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="left|center_vertical"
+                    android:layout_gravity="center"
+                    android:hint="回复内容"
+                    android:background="@drawable/et"
+                    android:inputType="none"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/iv_send_type_chg"
+                    android:layout_toLeftOf="@+id/iv_other_replay"
+                    android:layout_toStartOf="@+id/iv_other_replay" />
+
+                <ImageView
+                    android:id="@+id/imv_sound_replay"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_press_speak"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/iv_send_type_chg"
+                    android:layout_toLeftOf="@+id/iv_other_replay"
+                    android:layout_toStartOf="@+id/iv_other_replay"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_other_replay"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/send_other" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_send_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ry_content">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/imv_pic_replay"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/send_pic" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/list_item_line_color"/>
+
+        <LinearLayout
+            android:id="@+id/ly_tool"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:id="@+id/btn_cancel"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#028ddc"/>
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/list_item_line_color"/>
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:id="@+id/btn_ok"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="回复"
+                android:textColor="#028ddc"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 录音显示UI层-->
+    <LinearLayout
+        android:id="@+id/ly_rcd_popup"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            layout="@layout/voice_rcd_hint_window" />
+    </LinearLayout>
+
+</FrameLayout>
+

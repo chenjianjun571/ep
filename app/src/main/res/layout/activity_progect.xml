@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_bg_color"
+    tools:context="com.cdsf.ep.activity.ProgectActivity">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/head_bg_color"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tx_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_refresh"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="项目"
+            android:textColor="@color/head_title_text_color"
+            android:textSize="@dimen/head_title_text_size"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/img_add"
+            android:layout_width="@dimen/head_add_width"
+            android:layout_height="@dimen/head_add_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/add_select" />
+
+        <ImageView
+            android:id="@+id/img_refresh"
+            android:layout_width="@dimen/head_refresh_width"
+            android:layout_height="@dimen/head_refresh_height"
+            android:layout_alignTop="@+id/img_add"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/img_add"
+            android:layout_toStartOf="@+id/img_add"
+            android:src="@drawable/refresh" />
+
+    </RelativeLayout>
+
+    <com.tool.widget.ListViewCompat
+        android:id="@+id/projectLists"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_head"
+        android:divider="@null"/>
+
+
+</RelativeLayout>

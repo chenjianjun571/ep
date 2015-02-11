@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    tools:context="com.cdsf.ep.activity.MatterActivity">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/head_bg_color"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/head_back_width"
+            android:layout_height="@dimen/head_back_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_back_select"
+            android:text="项目"
+            android:textColor="@color/head_back_text_color"
+            android:textSize="@dimen/head_back_text_size" />
+
+        <TextView
+            android:id="@+id/tx_title"
+            android:layout_width="@dimen/head_title_width"
+            android:layout_height="@dimen/head_title_height"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="项目名称"
+            android:textColor="@color/head_title_text_color"
+            android:textSize="@dimen/head_title_text_size" />
+
+        <ImageView
+            android:id="@+id/img_add"
+            android:layout_width="@dimen/head_add_width"
+            android:layout_height="@dimen/head_add_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/add_select" />
+
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/matter_pull_refresh"
+        android:layout_below="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderTextColor="#0091db" />
+
+</RelativeLayout>

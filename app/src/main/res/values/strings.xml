@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ep</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新…</string>
+    <string name="pull_to_refresh_release_label">放开以刷新…</string>
+    <string name="pull_to_refresh_refreshing_label">正在载入…</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">往上使劲…</string>
+    <string name="pull_to_refresh_from_bottom_release_label">亲!放开我…</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">卖命加载中…</string>
+
+    <item name="progect_list_item_progect_info" type="id"/>
+    <item name="matter_list_item_matter_info" type="id"/>
+    <item name="matter_list_item_recv" type="id"/>
+    <item name="matter_list_item_replay" type="id"/>
+    <item name="matter_list_item_sound" type="id"/>
+    <item name="matter_list_item_re_fuse" type="id"/>
+    <item name="project_grid_view_item_user_info" type="id"/>
+    <item name="replay_list_item_sound" type="id"/>
+    <item name="replay_list_item_pic" type="id"/>
+
+    <!-- <string name="title_activity_login">LoginActivity</string> -->
+    <!-- <string name="title_activity_main">MainActivity</string> -->
+    <!-- <string name="title_activity_progect">ProgectActivity</string> -->
+    <!-- <string name="title_activity_personal_center">PersonalCenterActivity</string> -->
+    <!-- <string name="title_activity_matter">MatterActivity</string> -->
+    <!-- <string name="title_activity_matter_add">MatterAddActivity</string> -->
+    <!-- <string name="title_activity_progect_add">ProgectAddActivity</string> -->
+    <!-- <string name="title_activity_progect_info">ProgectInfoActivity</string> -->
+
+    <string name="title_activity_mod_info">ModInfoActivity</string>
+    <string name="title_activity_setting_popup_window">SettingPopupWindow</string>
+    <string name="title_activity_quick_reply">QuickReplyActivity</string>
+    <string name="title_activity_replay">ReplayActivity</string>
+    <string name="title_activity_display_pictures">DisplayPictures</string>
+
+</resources>

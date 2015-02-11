@@ -1,0 +1,276 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    tools:context="com.cdsf.ep.activity.ProgectInfoActivity">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/head_bg_color"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/head_back_width"
+            android:layout_height="@dimen/head_back_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_back_select"
+            android:text="列表"
+            android:textColor="@color/head_back_text_color"
+            android:textSize="@dimen/head_back_text_size" />
+
+        <TextView
+            android:id="@+id/tx_title"
+            android:layout_width="@dimen/head_title_width"
+            android:layout_height="@dimen/head_title_height"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="项目详情"
+            android:textColor="@color/head_title_text_color"
+            android:textSize="@dimen/head_title_text_size" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/btn_save"
+            android:layout_width="@dimen/head_save_width"
+            android:layout_height="@dimen/head_save_height"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:text="保存"
+            android:textColor="@color/head_back_text_color"
+            android:textSize="@dimen/head_back_text_size"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/rl_body_head"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/rl_head">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/project_bg"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginLeft="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ic_pic"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/def_pic"
+                app:border_color="@color/border_color"
+                app:border_width="@dimen/border_width" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tx_project_name"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="EP项目开发组"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ic_pic"
+                android:layout_toEndOf="@+id/ic_pic"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_info"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/rl_body_head"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="2.5"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+            
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/head_creater"
+                android:text="创建人"
+                android:textColor="@color/project_info_head_text_color"
+                android:textSize="@dimen/project_info_head_text_size"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="5dp"
+                android:id="@+id/textView4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/tx_project_creater"
+                android:text="陈建君"
+                android:textSize="@dimen/project_info_body_text_size"
+                android:textColor="@color/project_info_body_text_color"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="right|center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/textView4"
+                android:layout_toEndOf="@+id/textView4"
+                android:layout_marginLeft="10dp"/>
+            
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="2.5"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/head_time"
+                android:text="创建时间"
+                android:textColor="@color/project_info_head_text_color"
+                android:textSize="@dimen/project_info_head_text_size"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="5dp"
+                android:id="@+id/textView5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/tx_project_create_time"
+                android:text="2014-07-09"
+                android:textSize="@dimen/project_info_body_text_size"
+                android:textColor="@color/project_info_body_text_color"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="right|center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/textView5"
+                android:layout_toEndOf="@+id/textView5"
+                android:layout_marginLeft="10dp"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="3"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/head_intro"
+                android:text="项目简介"
+                android:textColor="@color/project_info_head_text_color"
+                android:textSize="@dimen/project_info_head_text_size"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="5dp"
+                android:id="@+id/textView3" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/textView3"
+                android:layout_toEndOf="@+id/textView3"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tx_project_content"
+                    android:text="这个集中交付深圳，广东，已经国外的一些屌丝国家这个集中交付深圳，广东，已经国外的一些屌丝国家这个集中交付深圳，广东，已经国外的一些屌丝国家这个集中交付深圳，广东，已经国外的一些屌丝国家"
+                    android:textSize="@dimen/project_info_body_text_size"
+                    android:textColor="@color/project_info_body_text_color"
+                    android:gravity="left|center_vertical"/>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ly_info"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" 人员列表"
+            android:textSize="18sp" />
+
+        <GridView
+            android:id="@+id/gv_progect_info_personnels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="10dp"
+            android:numColumns="4"
+            />
+        <!--<GridView-->
+            <!--android:id="@+id/gv_progect_info_personnels"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:horizontalSpacing="10dp"-->
+            <!--android:verticalSpacing="10dp"-->
+            <!--android:numColumns="auto_fit"-->
+            <!--android:columnWidth="45dp"-->
+            <!--android:background="@null"-->
+            <!--android:gravity="center"-->
+            <!--/>-->
+
+    </LinearLayout>
+
+</RelativeLayout>

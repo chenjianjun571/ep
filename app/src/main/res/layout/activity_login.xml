@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loading_view"
+    tools:context=".LoadActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"/>
+
+    <EditText
+        android:id="@+id/loginUser"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/corner_view"
+        android:drawableLeft="@drawable/login_user"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:hint="用户名"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+    <EditText
+        android:id="@+id/loginPasswd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/corner_view"
+        android:drawableLeft="@drawable/login_pass"
+        android:drawablePadding="10dp"
+        android:ellipsize="end"
+        android:password="true"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:hint="密码"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@+id/loginUser"
+        android:layout_alignLeft="@+id/loginUser"
+        android:layout_alignStart="@+id/loginUser"
+        android:layout_alignRight="@+id/loginUser"
+        android:layout_alignEnd="@+id/loginUser" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/button_select"
+        android:text="登录"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:id="@+id/loginBtn"
+        android:layout_below="@+id/loginPasswd"
+        android:layout_alignLeft="@+id/loginPasswd"
+        android:layout_alignStart="@+id/loginPasswd"
+        android:layout_alignRight="@+id/loginPasswd"
+        android:layout_alignEnd="@+id/loginPasswd"
+        android:layout_marginTop="60dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/ivSetting"
+        android:src="@drawable/setting"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/loginBtn"
+        android:layout_alignRight="@+id/loginBtn"
+        android:layout_alignEnd="@+id/loginBtn" />
+
+</RelativeLayout>

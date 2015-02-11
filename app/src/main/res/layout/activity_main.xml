@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/list_item_line_color"/>
+
+        <LinearLayout
+            android:id="@+id/main_tab_group"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="#F5F5F5"
+            android:baselineAligned="false"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingTop="2.0dip">
+
+            <FrameLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="@null">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/rbMainProgect"
+                        android:layout_width="45dip"
+                        android:layout_height="45dip"
+                        android:background="@drawable/ep_selected"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvMainMsgNum"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:background="@drawable/msg_bg"
+                        android:layout_gravity="top|right"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="12.0sp"
+                        android:visibility="gone" />
+
+                    </FrameLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@null">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/rbMainMyInfo"
+                        android:layout_width="45dip"
+                        android:layout_height="45dip"
+                        android:background="@drawable/me_nomal" />
+                </LinearLayout>
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</TabHost>

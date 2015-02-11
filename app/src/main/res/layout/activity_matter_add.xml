@@ -1,0 +1,408 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    tools:context="com.cdsf.ep.activity.MatterAddActivity">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/head_bg_color"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/head_back_width"
+            android:layout_height="@dimen/head_back_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_back_select"
+            android:text="事项"
+            android:textColor="@color/head_back_text_color"
+            android:textSize="@dimen/head_back_text_size" />
+
+        <TextView
+            android:id="@+id/tx_title"
+            android:layout_width="@dimen/head_title_width"
+            android:layout_height="@dimen/head_title_height"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="事项添加"
+            android:textColor="@color/head_title_text_color"
+            android:textSize="@dimen/head_title_text_size" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:id="@+id/btn_save"
+            android:layout_width="@dimen/head_save_width"
+            android:layout_height="@dimen/head_save_height"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:text="保存"
+            android:textColor="@color/head_back_text_color"
+            android:textSize="@dimen/head_back_text_size"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/rl_body_head"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/rl_head">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/matter_bg"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginLeft="10dp">
+
+            <FrameLayout
+                android:id="@+id/fy_creater_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ic_createter_pic"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/def_pic"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:border_width="@dimen/border_width"
+                    app:border_color="@color/border_color"/>
+
+                <ImageView
+                    android:id="@+id/img_creater_ep_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ep1"
+                    android:layout_gravity="bottom|center_horizontal"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:minWidth="45dp"
+                android:layout_height="20dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""
+                android:gravity="center_horizontal|left"
+                android:id="@+id/tx_createter"
+                android:layout_toEndOf="@+id/fy_creater_info"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/fy_creater_info" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/ly_body_content"
+        android:layout_below="@+id/rl_body_head"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="1"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/head_name"
+                android:text="事项类型"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/matter_info_head_text_color"
+                android:textSize="@dimen/matter_info_head_text_size"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="5dp"
+                android:id="@+id/textView1" />
+
+            <RadioGroup
+                android:id="@+id/rg_matter_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/textView1"
+                android:layout_toEndOf="@+id/textView1"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="文本"
+                    android:textSize="@dimen/matter_info_body_text_size"
+                    android:textColor="@color/matter_info_body_text_color"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:layout_marginRight="2dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_type_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="语音"
+                    android:textSize="@dimen/matter_info_body_text_size"
+                    android:textColor="@color/matter_info_body_text_color"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:layout_marginRight="2dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_type_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="图片"
+                    android:textSize="@dimen/matter_info_body_text_size"
+                    android:textColor="@color/matter_info_body_text_color"
+                    android:ellipsize="end"
+                    android:singleLine="true"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="1"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/head_time"
+                android:text="开始时间"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/matter_info_head_text_color"
+                android:textSize="@dimen/matter_info_head_text_size"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="5dp"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/right_edit_btn"
+                android:drawablePadding="5dp"
+                android:id="@+id/tx_matter_start_time"
+                android:text=""
+                android:textSize="@dimen/matter_info_body_text_size"
+                android:textColor="@color/matter_info_body_text_color"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="right|center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/textView2"
+                android:layout_toEndOf="@+id/textView2"
+                android:layout_marginLeft="10dp"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="1"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/head_time"
+                android:text="结束时间"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/matter_info_head_text_color"
+                android:textSize="@dimen/matter_info_head_text_size"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="5dp"
+                android:id="@+id/textView3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/right_edit_btn"
+                android:drawablePadding="5dp"
+                android:id="@+id/tx_matter_end_time"
+                android:text=""
+                android:textSize="@dimen/matter_info_body_text_size"
+                android:textColor="@color/matter_info_body_text_color"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="right|center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/textView3"
+                android:layout_toEndOf="@+id/textView3"
+                android:layout_marginLeft="10dp"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="2"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/head_intro"
+                android:text="事项内容"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/matter_info_head_text_color"
+                android:textSize="@dimen/matter_info_head_text_size"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="5dp"
+                android:id="@+id/textView4" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/textView4"
+                android:layout_toEndOf="@+id/textView4"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tx_matter_content_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:drawableRight="@drawable/right_edit_btn"
+                    android:drawablePadding="5dp"
+                    android:text=""
+                    android:textSize="@dimen/matter_info_body_text_size"
+                    android:textColor="@color/matter_info_body_text_color"
+                    android:ellipsize="end"
+                    android:maxLines="4"/>
+
+                <TextView
+                    android:id="@+id/tx_matter_content_sound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/voice_rcd_btn_nor"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="按住说话"
+                    android:textSize="@dimen/matter_info_body_text_size"
+                    android:textColor="@color/matter_info_body_text_color"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/imv_matter_content_pic"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="right|center"
+                    android:background="@drawable/matter_pic"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ly_body_content"
+        android:background="#E4E4E4"
+        android:id="@+id/tx_personnel_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text=" 添加人员"
+        android:textSize="18sp" />
+
+    <GridView
+        android:id="@+id/gv_matter_add_personnel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/tx_personnel_title"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:numColumns="4">
+    </GridView>
+
+    <!-- 录音显示UI层-->
+    <LinearLayout
+        android:id="@+id/rcChat_popup"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            layout="@layout/voice_rcd_hint_window" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="45dp"
+    android:layout_height="60dp"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="45dp"
+        android:layout_height="45dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cimg_personal_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher"
+            app:border_width="1px"
+            app:border_color="@color/border_color"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/img_item_del"
+            android:layout_gravity="right|top"
+            android:visibility="visible"
+            android:background="@drawable/msg_bg"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/tx_personal_name"
+        android:textStyle="italic"
+        android:textColor="@color/gray"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="12sp"
+        android:text="陈建君"
+        android:gravity="center"/>
+
+</LinearLayout>

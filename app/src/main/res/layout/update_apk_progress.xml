@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:minWidth="300dp"
+    android:layout_height="35dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="下载成功"
+        android:textColor="@color/green"
+        android:textSize="14sp"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/update_apk_loading_txt" />
+
+    <ProgressBar
+        android:id="@+id/update_apk_loading_progress"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:maxHeight="4.0dip"
+        android:minHeight="4.0dip"
+        style="?android:attr/progressBarStyleHorizontal"
+        />
+</LinearLayout>
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null">
+
+    <FrameLayout
+        android:id="@+id/fy_reply_info"
+        android:layout_width="70dp"
+        android:layout_height="70dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iv_replay_item_user_pic"
+            android:layout_width="@dimen/list_item_pic_width"
+            android:layout_height="@dimen/list_item_pic_height"
+            android:src="@drawable/ic_launcher"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            app:border_width="@dimen/border_width"
+            app:border_color="@color/border_color"/>
+
+        <ImageView
+            android:id="@+id/img_replay_item_ep_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ep1"
+            android:layout_gravity="bottom|center_horizontal"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/list_item_title_text_size"
+        android:textColor="@color/list_item_title_color"
+        android:textStyle="bold"
+        android:id="@+id/iv_replay_item_user_name"
+        android:text="罗骚骚"
+        android:layout_marginLeft="5dp"
+        android:layout_alignTop="@+id/fy_reply_info"
+        android:layout_toRightOf="@+id/fy_reply_info"
+        android:layout_toEndOf="@+id/fy_reply_info" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tx_replay_item_time"
+        android:textSize="@dimen/list_item_date_text_size"
+        android:textColor="@color/list_item_date_color"
+        android:textStyle="italic"
+        android:layout_marginTop="5dp"
+        android:text="2014-11-12 09:08:54"
+        android:layout_below="@+id/iv_replay_item_user_name"
+        android:layout_alignLeft="@+id/iv_replay_item_user_name"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fl_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tx_replay_item_time"
+        android:layout_alignLeft="@+id/iv_replay_item_user_name">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_item_content_text_size"
+            android:textColor="@color/list_item_content_color"
+            android:textStyle="normal"
+            android:gravity="center_vertical"
+            android:id="@+id/tx_replay_item_content"
+            android:includeFontPadding="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:text="哈哈~帮你上头条，哈哈~帮你上头条，哈哈~帮你上头条，哈哈~帮你上头条，哈哈~帮你上头条"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imv_replay_item_content_sound"
+            android:layout_gravity="left"
+            android:background="@drawable/play_han_3"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:id="@+id/imv_replay_item_content_pic"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#55000000"
+            />
+    </FrameLayout>
+
+</RelativeLayout>

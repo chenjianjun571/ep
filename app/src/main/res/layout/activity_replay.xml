@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    tools:context="com.cdsf.ep.activity.ReplayActivity">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/head_bg_color"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/head_back_width"
+            android:layout_height="@dimen/head_back_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_back_select"
+            android:text="返回"
+            android:textColor="@color/head_back_text_color"
+            android:textSize="@dimen/head_back_text_size" />
+
+        <TextView
+            android:id="@+id/tx_title"
+            android:layout_width="@dimen/head_title_width"
+            android:layout_height="@dimen/head_title_height"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="回复"
+            android:textColor="@color/head_title_text_color"
+            android:textSize="@dimen/head_title_text_size" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_head">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/matter_info_pull_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:divider="@color/list_item_line_color"
+                android:dividerHeight="1px"
+                ptr:ptrAnimationStyle="flip"
+                ptr:ptrHeaderTextColor="#0091db" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/list_item_line_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp">
+
+                <ImageView
+                    android:id="@+id/iv_send_type_chg"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/send_text" />
+
+                <EditText
+                    android:id="@+id/edit_text_replay"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/iv_send"
+                    android:layout_toRightOf="@+id/iv_send_type_chg"
+                    android:layout_toStartOf="@+id/iv_send"
+                    android:background="@drawable/et"
+                    android:gravity="left|center_vertical"
+                    android:hint="回复内容"
+                    android:inputType="none"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/imv_sound_replay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/iv_send"
+                    android:layout_toRightOf="@+id/iv_send_type_chg"
+                    android:layout_toStartOf="@+id/iv_send"
+                    android:background="@drawable/btn_press_speak"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_send"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/iv_other_replay"
+                    android:layout_toStartOf="@+id/iv_other_replay"
+                    android:src="@drawable/send_normal" />
+
+                <ImageView
+                    android:id="@+id/iv_other_replay"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/send_other" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/list_item_line_color" />
+
+            <LinearLayout
+                android:id="@+id/ly_send_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ry_content">
+
+                <ImageView
+                    android:id="@+id/imv_pic_replay"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/send_pic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 录音显示UI层-->
+        <LinearLayout
+            android:id="@+id/ly_rcd_popup"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+
+            <include
+                layout="@layout/voice_rcd_hint_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/iv_send_type_chg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/send_text"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/iv_send_type_chg"
+            android:layout_toLeftOf="@+id/iv_send_other"
+            android:layout_toStartOf="@+id/iv_send_other"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp">
+
+            <EditText
+                android:id="@+id/edit_replay"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="left|center_vertical"
+                android:hint="回复"
+                android:inputType="none"/>
+
+            <ImageView
+                android:id="@+id/imv_replay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_press_speak"
+                android:visibility="gone"
+                />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_send_other"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/send_other"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ly_send_other"
+            android:visibility="gone"
+            android:layout_below="@+id/iv_send_type_chg">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/send_pic"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

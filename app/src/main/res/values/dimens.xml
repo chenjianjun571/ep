@@ -1,0 +1,54 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="head_height">45dp</dimen>
+    // 标题栏返回按钮样式
+    <dimen name="head_back_width">75dp</dimen>
+    <dimen name="head_back_height">30dp</dimen>
+    <dimen name="head_back_text_size">16sp</dimen>
+    // 标题栏标题样式
+    <dimen name="head_title_width">120dp</dimen>
+    <dimen name="head_title_height">30dp</dimen>
+    <dimen name="head_title_text_size">22sp</dimen>
+    // 标题栏搜索样式
+    <dimen name="head_search_width">30dp</dimen>
+    <dimen name="head_search_height">30dp</dimen>
+    // 标题栏添加样式
+    <dimen name="head_add_width">30dp</dimen>
+    <dimen name="head_add_height">30dp</dimen>
+    // 标题栏刷新样式
+    <dimen name="head_refresh_width">30dp</dimen>
+    <dimen name="head_refresh_height">30dp</dimen>
+    // 标题栏保存样式
+    <dimen name="head_save_width">45dp</dimen>
+    <dimen name="head_save_height">30dp</dimen>
+
+    <!--原型图片圈边框-->
+    <dimen name="border_width">1dp</dimen>
+
+    <!--事项详情页面字体样式-->
+    <dimen name="matter_info_head_text_size">16sp</dimen>
+    <dimen name="matter_info_body_text_size">13sp</dimen>
+
+    <!--项目页面创建人，创建时间，项目简介等字体大小-->
+    <dimen name="project_info_head_text_size">16sp</dimen>
+    <dimen name="project_info_body_text_size">13sp</dimen>
+
+
+    <!--list的item相关字体大小-->
+    <!--头像大小-->
+    <dimen name="list_item_pic_width">60dp</dimen>
+    <dimen name="list_item_pic_height">60dp</dimen>
+    <!--标题-->
+    <dimen name="list_item_title_text_size">16sp</dimen>
+    <!--内容-->
+    <dimen name="list_item_content_text_size">14sp</dimen>
+    <!--日期-->
+    <dimen name="list_item_date_text_size">12sp</dimen>
+
+    <!--事项界面回复字体大小-->
+    <dimen name="matter_item_replay_text_size">12sp</dimen>
+
+</resources>

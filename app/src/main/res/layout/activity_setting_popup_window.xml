@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cdsf.ep.activity.SettingPopupWindow">
+
+    <RelativeLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cadetblue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ly_srv_ip"
+            android:layout_above="@+id/ly_srv_port"
+            android:layout_alignLeft="@+id/ly_srv_port"
+            android:layout_alignStart="@+id/ly_srv_port"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务器地址："
+                android:textColor="#2F4F4F"
+                android:textSize="16sp"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="150dp"
+                android:id="@+id/et_ip"
+                android:background="@drawable/corner_view"
+                android:inputType="textPostalAddress"
+                android:textColor="#2F4F4F"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:hint="请输入服务器IP"
+                android:textSize="16sp"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ly_srv_port"
+            android:layout_alignLeft="@+id/btn_ok"
+            android:layout_alignStart="@+id/btn_ok"
+            android:layout_above="@+id/btn_ok"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务器端口："
+                android:textColor="#2F4F4F"
+                android:textSize="16sp"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="150dp"
+                android:id="@+id/et_port"
+                android:background="@drawable/corner_view"
+                android:inputType="number"
+                android:numeric="integer"
+                android:textColor="#2F4F4F"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:hint="请输入服务器端口"
+                android:textSize="16sp"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="保存"
+            android:background="@color/teal"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
