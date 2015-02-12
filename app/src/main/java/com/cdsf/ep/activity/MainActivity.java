@@ -71,7 +71,7 @@ public class MainActivity extends TabActivity implements View.OnClickListener, M
                 .setContent(new Intent(this, PersonalCenterActivity.class)));
 
         MyPushMessageReceiver.setOnPushStatusListener(this);
-        Log.e("------", "启动推送........");
+        Log.e("------", "启动推送........"); 
         PushManager.startWork(getApplicationContext(),
                 PushConstants.LOGIN_TYPE_API_KEY,
                 MyApplication.getMetaValue(getApplicationContext(),"api_key"));
